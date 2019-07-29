@@ -1,16 +1,32 @@
 <nav class="site-nav">
     <a href="#" class="nav-toggle-btn"></a>
-        <ul>
-            {% for page in site.pages %}
-            {% if page.title and page.nomainnav != 1 %}
-            <li>
-                <a href="{{site.baseurl}}{{ page.url }}">
-                    {% if page.icon %} <i class="fas {{page.icon}}"></i> {% endif %}
-                    {{ page.title }}
-                </a>
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-        {{ include.location }}
-    </nav>
+    <ul>
+        <li>
+            <a href="{{site.baseurl}}/index">
+                {% if page.icon %} <i class="fas {{page.icon}}"></i> {% endif %}
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="{{site.baseurl}}/about">
+                {% if page.icon %} <i class="fas {{page.icon}}"></i> {% endif %}
+                About
+            </a>
+        </li>
+        <li>
+            <a href="{{site.baseurl}}/contacts">
+                {% if page.icon %} <i class="fas {{page.icon}}"></i> {% endif %}
+                Contacts
+            </a>
+        </li>
+        <li>
+            <a href="{{site.baseurl}}/author">
+                {% if page.icon %} <i class="fas {{page.icon}}"></i> {% endif %}
+                Author
+            </a>
+        </li>
+        
+        
+    </ul>
+    {{ include.location }}
+</nav>
