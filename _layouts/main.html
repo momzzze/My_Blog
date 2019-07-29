@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/site.css">
     <title>{{site.title}}</title>
 </head>
 
@@ -13,18 +13,7 @@
 
     <div class="site">
         <header class="site-header">
-            <h1 class="site-title">
-                <a href="/">Main</a>
-            </h1>
-            <nav>
-                <a href="#" class="nav-toggle-btn"></a>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Home</a></li>
-                </ul>
-            </nav>
+            {% include navigation.html %}
         </header>
 
 
@@ -40,7 +29,18 @@
             <p>All rights reserved &copy; ( ͡ᵔ ͜ʖ ͡ᵔ ) </p>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var bodyEl = $('body'),
+                navToggleBtn=bodyEl.find('.nav-toggle-btn');
 
+            navToggleBtn.on('click',function(e){
+                bodyEl.toggleClass('active-nav');
+                e.preventDefault();
+            })
+        })();
+    </script>
 </body>
 
 </html>
