@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Open Sans, Arial, sans-serif; 
+    overflow-x: hidden;
+}
+nav{
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    bottom: 0;
+    width: 200px;
+    background-color: #036;
+}
+nav ul{
+    list-style: none;
+}
