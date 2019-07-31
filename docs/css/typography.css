@@ -5,100 +5,71 @@
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-
-html {
   box-sizing: border-box;
-  font: 14px/1.5 "Fira Sans", Georgia, serif;
-}
-.site {
-  color: red;
 }
 
-@media (min-width: 600px) {
-  html {
-    font-size: var(--font-size-body-larger, 16px);
-  }
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-color);
+  list-style: none;
+  padding: 1.875em;
 }
 
-@media (min-width: 1024px) {
-  html {
-    font-size: var(--font-size-body-big, 18px);
-  }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      var(--light-green-opacityEightyPercent),
+      var(--dark-green-opacityEightyPercent)
+    ),
+    url("../images/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
 
-@media (min-width: 1600px) {
-  html {
-    font-size: var(--font-size-body-huge, 20px);
-  }
+.logo-box {
+  position: absolute;
+  top: 2.5em;
+  left: 2.5em;
+}
+.logo {
+  height: 10em;
+}
+.text-box {
+  position: absolute;  
+  left: 40%;  
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-.content {
-  padding-top: 300px;
-  height: 2000px;
-  background-color: #ccf;
+.heading-primary-main {
+  display: block;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 0.583em;
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1.3em;
   text-align: center;
-  transition: transform 0.4s ease;
-}
-
-body,table,form,select,option,input,textarea {
-    font:inherit;
-    background: var(--color-body-bgrd,#fff);
-    color: var(--color-body-text #000);
 }
 
 
-.site-title,
-h1,h2,h3,h4,h5,h6{
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    font-family: 'Saira Stencil One', cursive;
+@keyframes moveInLeft{
+  
 }
 
-h1{font-size: 2.6em;}
-h3{font-size: 2.0em;}
-h3{font-size: 1.8em;}
-h4{font-size: 1.4em;}
-h5{font-size: 1.2em;}
-h6{font-size: 1em;}
-
-a{
-    text-decoration: none;
-    color: var(--color-link-default,#0A0);
-}
-
-
-p, ul, ol{
-    padding-bottom: 1.5em;
-}
-
-
-ul, ol {
-    padding-left: 2em;    
-}
-
-ul ul,ol ul,ul ol, ol ol {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-ol>li>ol>li{
-    list-style-type: lower-roman;
-}
-
-blockquote{
-    padding: 1rem;
-}
-
-blockquote .author{
-    font-style: italic;
-    text-align: right;
-    opacity: 0.5;
-}
-
-blockquote .author:before{
-    display: inline-block;
-    content: '\2014';
-    padding-right: 0.5em;
+@keyframes moveInRight{
+  
 }
