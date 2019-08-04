@@ -1,0 +1,25 @@
+{
+  "name": "my_blog",
+  "version": "1.0.0",
+  "description": "This is my blog project",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/typography.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/momzzze/My_Blog.git"
+  },
+  "author": "N_Ninov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/momzzze/My_Blog/issues"
+  },
+  "homepage": "https://github.com/momzzze/My_Blog#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
